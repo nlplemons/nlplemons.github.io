@@ -1,0 +1,220 @@
+
+############## Contributor info ##########################
+
+# Reporting things that don't work is essential for faster progress in the field, and nothing to be ashamed of.
+# We therefore encourage you to indicate your github user id or real name, but you can put in "Anonymous" if you wish.
+Sign_as: username
+
+# If someone is interested in your report and would like to get in touch about it,
+# would you like to allow yourself to be contacted? If so, please leave your email (it will be displayed scrambled)
+Contact_email: xyz@gmail.com
+
+############## The data that was used #####################
+
+# the name of the dataset or benchmark that was used (SQuAD, GLUE, SNLI etc.)
+Dataset_name: "Some dataset"
+
+# the actual data that was used to test the model, or the leaderboard URL (for leaderboards with hidden test set):
+Dataset_URL: http://example.com
+
+############## Model data ##################################
+
+# please submit acl anthology or arxiv link, so that we could retrieve the bibtex entry automatically
+Paper_URL: http://example.com
+
+# The name of the model:
+Model_name: "Some model"
+
+# Where can the original implementation be found?
+Code_repo: http://example.com
+
+# If the model was reimplemented, where can the code be found?
+Reimplementation_repo: n/a
+
+Problem_description: "The code failed to run"
+
+# modifications to the original parameters, if any
+Modifications: "batch size 600"
+
+############## What kind of model failed? ###################
+
+# Please uncomment the features applicable to this model. This is optional, but if you do this, we will tag your report with these features, and it will help people (a) find your work, (b) see what kind of models tend to have what kind of problems. If you have suggestions for features not in the list, feel free to add them in the appropriate section, in the same format as the rest of the text, and we'll consider adding them to the list.
+
+Model_features:
+
+## Optimization/Learning
+
+### Optimizers and Optimization Techniques
+
+  #   optim-sgd              # Mini-batch SGD: http://pfliu.com/pl-nlp2019/bs/optim-sgd.html)
+  #   optim-adam             # Adam: http://pfliu.com/pl-nlp2019/bs/optim-adam.html (implies `optim-sgd`)
+  #   optim-adagrad          # Adagrad: http://pfliu.com/pl-nlp2019/bs/optim-adagrad.html (implies `optim-sgd`)
+  #   optim-adadelta         # Adadelta: http://pfliu.com/pl-nlp2019/bs/optim-adadelta.html (implies `optim-sgd`)
+  #   optim-noam             # Adam with Specialized Transformer Learning Rate ("Noam" Schedule): http://pfliu.com/pl-nlp2019/bs/optim-noam.html (implies `optim-adam`)
+  #   optim-momentum         # SGD with Momentum: http://pfliu.com/pl-nlp2019/bs/optim-momentum.html (implies `optim-sgd`)
+  #   optim-amsgrad          # AMS: http://pfliu.com/pl-nlp2019/bs/optim-amsgrad.html (implies `optim-sgd`)
+  #   optim-projection       # Projection / Projected Gradient Descent: http://pfliu.com/pl-nlp2019/bs/optim-projection.html (implies `optim-sgd`)
+
+### Initialization
+
+  #   init-glorot            # Glorot/Xavier Initialization: http://pfliu.com/pl-nlp2019/bs/init-glorot.html
+  #   init-he                # He Initialization: http://pfliu.com/pl-nlp2019/bs/init-he.html
+
+### Regularization
+
+  #   reg-dropout            # Dropout: http://pfliu.com/pl-nlp2019/bs/reg-dropout.html
+  #   reg-worddropout        # Word Dropout: http://pfliu.com/pl-nlp2019/bs/reg-worddropout.html (implies `reg-dropout`)
+  #   reg-norm               # Norm (L1/L2) Regularization: http://pfliu.com/pl-nlp2019/bs/reg-norm.html
+  #   reg-stopping           # Early Stopping: http://pfliu.com/pl-nlp2019/bs/reg-stopping.html
+  #   reg-patience           # Patience: http://pfliu.com/pl-nlp2019/bs/reg-patience.html (implies `reg-stopping`)
+  #   reg-decay              # Weight Decay: http://pfliu.com/pl-nlp2019/bs/reg-decay.html
+  #   reg-labelsmooth        # Label Smoothing: http://pfliu.com/pl-nlp2019/bs/reg-labelsmooth.html
+
+### Normalization
+
+  #   norm-layer             # Layer Normalization: http://pfliu.com/pl-nlp2019/bs/norm-layer.html
+  #   norm-batch             # Batch Normalization: http://pfliu.com/pl-nlp2019/bs/norm-batch.html
+  #   norm-gradient          # Gradient Clipping: http://pfliu.com/pl-nlp2019/bs/norm-gradient.html
+
+### Loss Functions (other than cross-entropy
+
+  #   loss-cca               # Canonical Correlation Analysis (CCA): http://pfliu.com/pl-nlp2019/bs/loss-cca.html
+  #   loss-svd               # Singular Value Decomposition (SVD): http://pfliu.com/pl-nlp2019/bs/loss-svd.html
+  #   loss-margin            # Margin-based Loss Functions: http://pfliu.com/pl-nlp2019/bs/loss-margin.html
+  #   loss-cons              # Contrastive Loss: http://pfliu.com/pl-nlp2019/bs/loss-cons.html
+  #   loss-nce               # Noise Contrastive Estimation (NCE): http://pfliu.com/pl-nlp2019/bs/loss-nce.html (implies `loss-cons`)
+  #   loss-triplet           # Triplet Loss: http://pfliu.com/pl-nlp2019/bs/loss-triplet.html (implies `loss-cons`)
+
+### Training Paradigms
+
+  #   train-mtl              # Multi-task Learning (MTL): http://pfliu.com/pl-nlp2019/bs/train-mtl.html
+  #   train-mll              # Multi-lingual Learning (MLL): http://pfliu.com/pl-nlp2019/bs/train-mll.html (implies `train-mtl`)
+  #   train-transfer         # Transfer Learning: http://pfliu.com/pl-nlp2019/bs/train-transfer.html
+  #   train-active           # Active Learning: http://pfliu.com/pl-nlp2019/bs/train-active.html
+  #   train-augment          # Data Augmentation: http://pfliu.com/pl-nlp2019/bs/train-augment.html
+  #   train-curriculum       # Curriculum Learning: http://pfliu.com/pl-nlp2019/bs/train-curriculum.html
+  #   train-parallel         # Parallel Training: http://pfliu.com/pl-nlp2019/bs/train-parallel.html
+
+## Sequence Modeling Architectures
+
+### Activation Functions
+
+  #   activ-tanh             # Hyperbolic Tangent (tanh): http://pfliu.com/pl-nlp2019/bs/activ-tanh.html
+  #   activ-relu             # Rectified Linear Units (RelU): http://pfliu.com/pl-nlp2019/bs/activ-relu.html
+
+### Pooling Operations
+
+  #   pool-max               # Max Pooling: http://pfliu.com/pl-nlp2019/bs/pool-max.html
+  #   pool-mean              # Mean Pooling: http://pfliu.com/pl-nlp2019/bs/pool-mean.html
+  #   pool-kmax              # k-Max Pooling: http://pfliu.com/pl-nlp2019/bs/pool-kmax.html
+
+### Recurrent Architectures
+
+  #   arch-rnn               # Recurrent Neural Network (RNN): http://pfliu.com/pl-nlp2019/bs/arch-rnn.html
+  #   arch-birnn             # Bi-directional Recurrent Neural Network (Bi-RNN): http://pfliu.com/pl-nlp2019/bs/arch-birnn.html (implies `arch-rnn`)
+  #   arch-lstm              # Long Short-term Memory (LSTM): http://pfliu.com/pl-nlp2019/bs/arch-lstm.html (implies `arch-rnn`)
+  #   arch-bilstm            # Bi-directional Long Short-term Memory (LSTM): http://pfliu.com/pl-nlp2019/bs/arch-bilstm.html (implies `arch-birnn`, `arch-lstm`)
+  #   arch-gru               # Gated Recurrent Units (GRU): http://pfliu.com/pl-nlp2019/bs/arch-gru.html (implies `arch-rnn`)
+  #   arch-bigru             # Bi-directional Gated Recurrent Units (GRU): http://pfliu.com/pl-nlp2019/bs/arch-bigru.html (implies `arch-birnn`, `arch-gru`)
+
+### Other Sequential/Structured Architectures
+
+  #   arch-bow               # Bag-of-words, Bag-of-embeddings, Continuous Bag-of-words (BOW)
+  #   arch-cnn               # Convolutional Neural Networks (CNN): http://pfliu.com/pl-nlp2019/bs/arch-cnn.html
+  #   arch-att               # Attention: http://pfliu.com/pl-nlp2019/bs/arch-att.html
+  #   arch-selfatt           # Self Attention: http://pfliu.com/pl-nlp2019/bs/arch-selfatt.html (implies `arch-att`)
+  #   arch-recnn             # Recursive Neural Network (RecNN): http://pfliu.com/pl-nlp2019/bs/arch-recnn.html
+  #   arch-treelstm          # Tree-structured Long Short-term Memory (TreeLSTM): http://pfliu.com/pl-nlp2019/bs/arch-treelstm.html (implies `arch-recnn`)
+  #   arch-gnn               # Graph Neural Network (GNN): http://pfliu.com/pl-nlp2019/bs/arch-gnn.html
+  #   arch-gcnn              # Graph Convolutional Neural Network (GCNN): http://pfliu.com/pl-nlp2019/bs/arch-gcnn.html (implies `arch-gnn`)
+
+### Architectural Techniques
+
+  #   arch-residual          # Residual Connections (ResNet): http://pfliu.com/pl-nlp2019/bs/arch-residual.html
+  #   arch-gating            # Gating Connections, Highway Connections: http://pfliu.com/pl-nlp2019/bs/arch-gating.html
+  #   arch-memo              # Memory: http://pfliu.com/pl-nlp2019/bs/arch-memo.html
+  #   arch-copy              # Copy Mechanism: http://pfliu.com/pl-nlp2019/bs/arch-copy.html
+  #   arch-bilinear          # Bilinear, Biaffine Models: http://pfliu.com/pl-nlp2019/bs/arch-bilinear.html
+  #   arch-coverage          # Coverage Vectors/Penalties: http://pfliu.com/pl-nlp2019/bs/arch-coverage.html
+  #   arch-subword           # Subword Units: http://pfliu.com/pl-nlp2019/bs/arch-subword.html
+  #   arch-energy            # Energy-based, Globally-normalized Mdels: http://pfliu.com/pl-nlp2019/bs/arch-energy.html
+
+### Standard Composite Architectures
+
+  #   arch-transformer       # Transformer: http://pfliu.com/pl-nlp2019/bs/arch-transformer.html (implies `arch-selfatt`, `arch-residual`, `arch-layernorm`, `optim-noam`)
+
+## Model Combination
+
+  #   comb-ensemble          # Ensembling: http://pfliu.com/pl-nlp2019/bs/comb-ensemble.html
+
+## Search Algorithms
+
+  #   search-greedy          # Greedy Search: http://pfliu.com/pl-nlp2019/bs/search-greedy.html
+  #   search-beam            # Beam Search: http://pfliu.com/pl-nlp2019/bs/search-beam.html
+  #   search-astar           # A* Search: http://pfliu.com/pl-nlp2019/bs/search-astar.html
+  #   search-viterbi         # Viterbi Algorithm: http://pfliu.com/pl-nlp2019/bs/search-viterbi.html
+  #   search-sampling        # Ancestral Sampling: http://pfliu.com/pl-nlp2019/bs/search-sampling.html
+  #   search-gumbel          # Gumbel Max: http://pfliu.com/pl-nlp2019/bs/search-gumbel.html (implies `search-sampling`)
+
+## Prediction Tasks
+
+  #   task-textclass         # Text Classification (text -> label): http://pfliu.com/pl-nlp2019/bs/task-textclass.html
+  #   task-textpair          # Text Pair Classification (two texts -> label: http://pfliu.com/pl-nlp2019/bs/task-textpair.html
+  #   task-seqlab            # Sequence Labeling (text -> one label per token): http://pfliu.com/pl-nlp2019/bs/task-seqlab.html
+  #   task-extractive        # Extractive Summarization (text -> subset of text): http://pfliu.com/pl-nlp2019/bs/task-extractive.html (implies `text-seqlab`)
+  #   task-spanlab           # Span Labeling (text -> labels on spans): http://pfliu.com/pl-nlp2019/bs/task-spanlab.html
+  #   task-lm                # Language Modeling (predict probability of text): http://pfliu.com/pl-nlp2019/bs/task-lm.html
+  #   task-condlm            # Conditioned Language Modeling (some input -> text): http://pfliu.com/pl-nlp2019/bs/task-condlm.html (implies `task-lm`)
+  #   task-seq2seq           # Sequence-to-sequence Tasks (text -> text, including MT): http://pfliu.com/pl-nlp2019/bs/task-seq2seq.html (implies `task-condlm`)
+  #   task-cloze             # Cloze-style Prediction, Masked Language Modeling (right and left context -> word): http://pfliu.com/pl-nlp2019/bs/task-cloze.html
+  #   task-context           # Context Prediction (as in word2vec) (word -> right and left context): http://pfliu.com/pl-nlp2019/bs/task-context.html
+  #   task-relation          # Relation Prediction (text -> graph of relations between words, including dependency parsing): http://pfliu.com/pl-nlp2019/bs/task-relation.html
+  #   task-tree              # Tree Prediction (text -> tree, including syntactic and some semantic semantic parsing): http://pfliu.com/pl-nlp2019/bs/task-tree.html
+  #   task-graph             # Graph Prediction (text -> graph not necessarily between nodes): http://pfliu.com/pl-nlp2019/bs/task-graph.html
+  #   task-lexicon           # Lexicon Induction/Embedding Alignment (text/embeddings -> bi- or multi-lingual lexicon): http://pfliu.com/pl-nlp2019/bs/task-lexicon.html
+  #   task-alignment         # Word Alignment (parallel text -> alignment between words): http://pfliu.com/pl-nlp2019/bs/task-alignment.html
+
+## Composite Pre-trained Embedding Techniques
+
+  #   pre-word2vec           # word2vec: http://pfliu.com/pl-nlp2019/bs/pre-word2vec.html (implies `arch-cbow`, `task-cloze`, `task-context`)
+  #   pre-fasttext           # fasttext: http://pfliu.com/pl-nlp2019/bs/pre-fasttext.html (implies `arch-cbow`, `arch-subword`, `task-cloze`, `task-context`)
+  #   pre-glove              # GloVe: http://pfliu.com/pl-nlp2019/bs/pre-glove.html
+  #   pre-paravec            # Paragraph Vector (ParaVec): http://pfliu.com/pl-nlp2019/bs/pre-paravec.html
+  #   pre-skipthought        # Skip-thought: http://pfliu.com/pl-nlp2019/bs/pre-skipthought.html (implies `arch-lstm`, `task-seq2seq`)
+  #   pre-elmo               # ELMo: http://pfliu.com/pl-nlp2019/bs/pre-elmo.html (implies `arch-bilstm`, `task-lm`)
+  #   pre-bert               # BERT: http://pfliu.com/pl-nlp2019/bs/pre-bert.html (implies `arch-transformer`, `task-cloze`, `task-textpair`)
+  #   pre-use                # Universal Sentence Encoder (USE): http://pfliu.com/pl-nlp2019/bs/pre-use.html (implies `arch-transformer`, `task-seq2seq`)
+
+## Structured Models/Algorithms
+
+  #   struct-hmm             # Hidden Markov Models (HMM): http://pfliu.com/pl-nlp2019/bs/struct-hmm.html
+  #   struct-crf             # Conditional Random Fields (CRF): http://pfliu.com/pl-nlp2019/bs/struct-crf.html
+  #   struct-cfg             # Context-free Grammar (CFG): http://pfliu.com/pl-nlp2019/bs/struct-cfg.html
+  #   struct-ccg             # Combinatorial Categorical Grammar (CCG): http://pfliu.com/pl-nlp2019/bs/struct-ccg.html
+
+## Relaxation/Training Methods for Non-differentiable Functions
+
+  #   nondif-enum             # Complete Enumeration: http://pfliu.com/pl-nlp2019/bs/nondif-enum.html
+  #   nondif-straightthrough  # Straight-through Estimator: http://pfliu.com/pl-nlp2019/bs/nondif-straightthrough.html
+  #   nondif-gumbelsoftmax    # Gumbel Softmax: http://pfliu.com/pl-nlp2019/bs/nondif-gumbelsoftmax.html
+  #   nondif-minrisk          # Minimum Risk Training: http://pfliu.com/pl-nlp2019/bs/nondif-minrisk.html
+  #   nondif-reinforce        # REINFORCE: http://pfliu.com/pl-nlp2019/bs/nondif-reinforce.html
+
+## Adversarial Methods
+
+  #   adv-gan                 # Generative Adversarial Networks (GAN): http://pfliu.com/pl-nlp2019/bs/adv-gan.html
+  #   adv-feat                # Adversarial Feature Learning: http://pfliu.com/pl-nlp2019/bs/adv-feat.html
+  #   adv-examp               # Adversarial Examples: http://pfliu.com/pl-nlp2019/bs/adv-examp.html
+  #   adv-train               # Adversarial Training: http://pfliu.com/pl-nlp2019/bs/adv-train.html (implies `adv-examp`)
+
+## Latent Variable Models
+
+  #   latent-vae              # Variational Auto-encoder (VAE): http://pfliu.com/pl-nlp2019/bs/latent-vae.html
+  #   latent-topic            # Topic Model: http://pfliu.com/pl-nlp2019/bs/latent-topic.html
+
+## Meta Learning
+
+  #   meta-init               # Meta-learning Initialization: http://pfliu.com/pl-nlp2019/bs/meta-init.html
+  #   meta-optim              # Meta-learning Optimizers: http://pfliu.com/pl-nlp2019/bs/meta-optim.html
+  #   meta-loss               # Meta-learning Loss functions: http://pfliu.com/pl-nlp2019/bs/meta-loss.html
+  #   meta-arch			      # Neural Architecture Search: http://pfliu.com/pl-nlp2019/bs/meta-arch.html
