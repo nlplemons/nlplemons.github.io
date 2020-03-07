@@ -1,10 +1,11 @@
 ##########################################################
 #
 # This is the template file for reporting problems with
-# published papers, where the results achieved by the authors
-# cannot be reproduced. For example, if you find that running
-# the published code on the original data yields substantially
-# lower performance, you should let the world know!
+# published models that do not generalize beyond
+# the benchmarks that they were published with. For example,
+# if you find that a model achieves SOTA on one
+# QA dataset, but does unexpectedly poorly on other(s),
+# you should let the world know!
 #
 # Please indicate below if it's ok for people to contact you
 # about this report.
@@ -30,6 +31,11 @@ Dataset_name: "some dataset"
 # the actual data that was used to test the model, or the leaderboard URL (for leaderboards with hidden test set):
 Dataset_URL: "http://example.com"
 
+# is this the original dataset, or was it adapted in some way?
+# if so, please describe briefly what was done and make sure the URL points
+# to the correct version
+Dataset_URL: "original format"
+
 ############## Model data ##################################
 
 # please submit acl anthology or arxiv link, so that we could retrieve the bibtex entry automatically
@@ -38,16 +44,12 @@ Paper_URL: "http://example.com"
 # The name of the model:
 Model_name: "someFancyModel"
 
-# Where can the original implementation be found?
+# Repository with the code
 Code_repo: "http://example.com"
 
-# If the model was reimplemented, where can the code be found?
-Reimplementation_repo: "http://example.com"
-
+# Briefly describe the idea for this model, what was the expected behavior,
+# what you actually got, and any ideas why this might have failed.
 Problem_description: "Something went wrong"
-
-# modifications to the original parameters, if any
-Modifications: "some other batch size"
 
 ############## What kind of model failed? ###################
 

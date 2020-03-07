@@ -1,13 +1,15 @@
 ##########################################################
 #
-# This is the template file for reporting problems with
-# published papers, where the results achieved by the authors
-# cannot be reproduced. For example, if you find that running
-# the published code on the original data yields substantially
-# lower performance, you should let the world know!
+# This is the template file for reporting failed experiments
+# with new NLP architectures. If you have worked on some idea
+# for a long time only to find that it is not going to succeed,
+# this work does NOT have to just disappear.
 #
-# Please indicate below if it's ok for people to contact you
-# about this report.
+# If this idea is hopeless, your report might save someone
+# a lot of time. And if it is not actually hopeless, if you've
+# simply made an error that you cannot see, then someone might
+# find it and offer to work on this together. Please indicate
+# below if it's ok for people to contact you about this.
 #
 ##########################################################
 
@@ -29,6 +31,11 @@ Dataset_name: "some dataset"
 
 # the actual data that was used to test the model, or the leaderboard URL (for leaderboards with hidden test set):
 Dataset_URL: "http://example.com"
+
+# is this the original dataset, or was it adapted in some way?
+# if so, please describe briefly what was done and make sure the URL points
+# to the correct version
+Dataset_URL: "original format"
 
 ############## Model data ##################################
 
