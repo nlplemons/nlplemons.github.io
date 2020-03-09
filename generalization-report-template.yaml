@@ -36,6 +36,9 @@ Dataset_URL: "http://example.com"
 # to the correct version
 Dataset_URL: "original format"
 
+# What NLP task is this for?
+Task: "summarization"
+
 ############## Model data ##################################
 
 # please submit acl anthology or arxiv link, so that we could retrieve the bibtex entry automatically
